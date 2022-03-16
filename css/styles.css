@@ -1,0 +1,95 @@
+:root {
+  --Bright-orange-sedan: hsl(31, 77%, 52%);
+  --Dark-cyan-suv: hsl(184, 100%, 22%);
+  --Very-dark-cyan-lux: hsl(179, 100%, 13%);
+  --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+
+h1 {
+  text-align: left;
+  margin: 0;
+  padding: 0.5em 0;
+  text-transform: uppercase;
+  color: var(--Very-light-gray-background-headings-buttons);
+}
+
+p {
+  color: var(--Transparent-white-paragraphs);
+  margin: 0;
+  padding: 1em 0;
+}
+
+img {
+  display: block;
+  border: 0;
+  width: 25%;
+  height: auto;
+}
+
+button {
+  text-align: center;
+  width: 66%;
+  padding: 7px 25px;
+  border-radius: 25px;
+}
+
+/*--------------------------------------------------------------
+General styling
+--------------------------------------------------------------*/
+
+html,
+body {
+  font-family: "Big Shoulders Display", cursive;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.vehicle-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sedan {
+  background-color: var(--Bright-orange-sedan);
+  padding: 2em;
+}
+
+.suv {
+  background-color: var(--Dark-cyan-suv);
+  padding: 2em;
+}
+
+.luxury {
+  background-color: var(--Very-dark-cyan-lux);
+  padding: 2em;
+}
+
+.sedan > button {
+  color: var(--Bright-orange-sedan);
+}
+
+.suv > button {
+  color: var(--Dark-cyan-suv);
+}
+
+.luxury > button {
+  color: var(--Very-dark-cyan-lux);
+}
+/* .sedan,.suv,.luxury:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+} */
+
+/*--------------------------------------------------------------
+Use flexbox to create a mobile layout
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 700px) {
+  @supports (display: flex) {
+    /* flex-direction: col  */
+  }
+}
