@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/dsoluk/3-column-preview-card-component-main)
-- Live Site URL: [Add live site URL here](https://dsoluk.github.io/3-column-preview-card-component-main/)
+- Solution URL: [https://github.com/dsoluk/3-column-preview-card-component-main]
+- Live Site URL: [https://dsoluk.github.io/3-column-preview-card-component-main/]()
 
 ## My process
 
