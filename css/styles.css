@@ -32,10 +32,13 @@ img {
 }
 
 button {
+  /* display: inline-block; */
   text-align: center;
-  width: 66%;
-  padding: 7px 25px;
+  width: 9em;
+  padding: 3px;
   border-radius: 25px;
+  font-size: xx-small;
+  border: none;
 }
 
 /*--------------------------------------------------------------
@@ -49,24 +52,27 @@ body {
 }
 
 .vehicle-container {
-  width: 80%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
+  font-size: x-small;
 }
 
 .sedan {
   background-color: var(--Bright-orange-sedan);
-  padding: 2em;
+  padding: 1em;
+  border-radius: 12px 12px 0px 0px;
 }
 
 .suv {
   background-color: var(--Dark-cyan-suv);
-  padding: 2em;
+  padding: 1em;
 }
 
 .luxury {
   background-color: var(--Very-dark-cyan-lux);
-  padding: 2em;
+  padding: 1em;
+  border-radius: 0 0 12px 12px;
 }
 
 .sedan > button {
@@ -80,16 +86,48 @@ body {
 .luxury > button {
   color: var(--Very-dark-cyan-lux);
 }
-/* .sedan,.suv,.luxury:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-} */
+
+button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  border: 3px solid black;
+}
 
 /*--------------------------------------------------------------
 Use flexbox to create a mobile layout
 --------------------------------------------------------------*/
 
+@media screen and (min-width: 370px) {
+  @supports (display: flex) {
+  }
+}
+
 @media screen and (min-width: 700px) {
   @supports (display: flex) {
-    /* flex-direction: col  */
+    body {
+      margin: 0;
+    }
+    .vehicle-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      height: 100vh;
+
+      font-size: medium;
+    }
+
+    .sedan {
+      border-radius: 12px 0 0 12px;
+    }
+
+    .luxury {
+      border-radius: 0 12px 12px 0;
+    }
+
+    button {
+      padding: 5px;
+      font-size: small;
+    }
   }
 }
